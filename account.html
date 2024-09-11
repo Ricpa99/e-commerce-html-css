@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Liu+Jian+Mao+Cao&family=Poppins:wght@200;400;500;600;700&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Account</title>
+</head>
+<body>
+
+<!----navbar-->
+
+ <section class="container">  
+    <section class="navbar">
+         <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="125px"></a>
+        </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="aktif"><a href="#">Account</a></li>
+                </ul>
+            </nav>
+            <a href="product.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </section>
+</section>
+
+<!----Account-page---->
+<section class="conten">
+    <div class="acount-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>                    
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="#">Forgot password</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                            <a href="#">Forgot password</a>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+    <!----footer-->
+    <section class="conten">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="f-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download Apss for android and os mobile phone</p>
+                    <div class="app-logo">
+                        <a href="playstore.com"><img src="images/play-store.png"></a>
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                    <div class="f-col-2">
+                        <img src="images/logo-white.png">
+                        <p>Our purpose is to sustainably make the pleasure and 
+                        benefit of sports accessible to the many.</p>
+                    </div>
+                    <div class="f-col-3">
+                        <h3>Useful links</h3>
+                        <ul>
+                            <li>Coupuns</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="f-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="https://web.facebook.com/?_rdc=1&_rdr">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/">Instagram</a></li>
+                            <li>Twitter</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr> <p class="copy-right">copy right 2020 - @example</p>
+            </div>
+        </div>
+    </section>
+
+    <!----js untuk menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+    </script>
+
+    
+     <!----js untuk form---->
+    
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+    
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login(){
+            RegForm.style.transform = "translateX(400px)";
+            LoginForm.style.transform = "translateX(400px)";
+            Indicator.style.transform = "translateX(0px)";
+
+        }
+    </script>
+</body>
+</html>
