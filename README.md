@@ -41,3 +41,6 @@ Untuk melihat dan mengedit template ini secara lokal:
     ```
     
 3. **Buka index.html di peramban Anda untuk melihat halaman utama**
+
+## 📸 Screnshot
+![image alt](https://github.com/Ricpa99/e-commerce-html-css/blob/4a0f415fe91362772bb7b372a03a5082b77105e7/halaman/Home_product.png)
